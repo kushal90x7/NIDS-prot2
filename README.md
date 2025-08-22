@@ -135,13 +135,6 @@ python src/simulate_attacks.py --attack-type all
 - Supports DoS and port scanning attacks
 - Configurable attack duration and intensity
 
-## Model Performance
-
-- Accuracy: 99.04%
-- Precision: 99%
-- Recall: 99%
-- F1-Score: 99%
-
 ## Attack Detection Capabilities
 
 1. DoS (Denial of Service) Attacks:
@@ -164,16 +157,5 @@ The system logs all detected intrusion attempts in `logs/intrusion_detection.log
 - Attack type
 - Confidence score
 
-## Troubleshooting
-
-1. GUI Not Showing:
-   - Verify X11 server is running
-   - Check DISPLAY environment variable
-   - Ensure X11 server allows connections
-
-2. Network Capture Issues:
-   - Run containers with --privileged flag
-   - Verify network interface accessibility
-   - Check container network mode is "host"
 
 
