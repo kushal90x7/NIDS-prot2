@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NIDS Dashboard</title>
+</head>
+<body>
+    <h1>NIDS Dashboard</h1>
+    <button onclick="runDetection()">Run Detection</button>
+    <button onclick="stopDetection()">Stop Detection</button>
+    <button onclick="showLogs()">Show Logs</button>
+    <button onclick="showAlerts()">Show Alerts</button>
+    <h2>Detection & Logs:</h2>
+    <pre id="logs"></pre>
+    <h2>Alerts:</h2>
+    <pre id="alerts"></pre>
+    <script>
+        function runDetection() {
+            fetch('/run_detection')
+                .then(r => r.json())
+                .then(d => alert(d.result));
+        }
+        function stopDetection() {
+            fetch('/stop_detection')
+                .then(r => r.json())
+                .then(d => alert(d.status));
+        }
+        function showLogs() {
+            fetch('/logs')
+                .then(r => r.json())
+                .then(d => {
+                    document.getElementById('logs').innerText = d.logs;
+                });
+        }
+        function showAlerts() {
+            fetch('/alerts')
+                .then(r => r.json())
+                .then(d => {
+                    document.getElementById('alerts').innerText = d.alerts;
+                });
+        }
+    </script>
+</body>
+</html>
