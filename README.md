@@ -30,11 +30,6 @@ nids_project/
 │   ├── collect_data.py     # Data collection script
 │   ├── train_model.py      # Model training script
 │   └── simulate_attacks.py # Attack traffic simulator
-├── Dockerfile        # Main NIDS container
-├── Dockerfile.generator    # Traffic/Attack generator container
-├── docker-compose.yml     # Multi-container orchestration
-├── run.sh           # Linux/MacOS startup script
-└── run.bat          # Windows startup script
 ```
 
 ## Requirements
@@ -156,6 +151,7 @@ The system logs all detected intrusion attempts in `logs/intrusion_detection.log
 - Protocol
 - Attack type
 - Confidence score
+
 
 
 
