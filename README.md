@@ -113,6 +113,11 @@ python src/nids.py
 python src/simulate_attacks.py --attack-type all
 ```
 
+5. (Optional) Simulate attacks:
+```bash
+python src/run.py --mode [local,docker,web_interface] --interface [Ethernet,WiFi #use ipconfig command in powershell to get all the interfaces] all
+```
+
 ## Docker Container Details
 
 ### NIDS Monitor Container
@@ -151,6 +156,7 @@ The system logs all detected intrusion attempts in `logs/intrusion_detection.log
 - Protocol
 - Attack type
 - Confidence score
+
 
 
 
